@@ -1,3 +1,3 @@
 class Employee < ActiveRecord::Base
-  mount_uploader :image, AvatarUploader
+  mount_uploader :image, ImageUploader
 end
