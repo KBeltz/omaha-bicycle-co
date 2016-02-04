@@ -12,7 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
 //= require turbolinks
 //= require tinymce
 //= require tinymce-jquery
 //= require_tree .
+
+$(function(){ $(document).foundation(); });
