@@ -1,6 +1,9 @@
 ActiveAdmin.register AdminUser do
   permit_params :email, :password, :password_confirmation
 
+
+  # When logged in as a standard AdminUser and you try to change your own password, Devise automatically logs you out.
+  # Adding the following controller override to admin_user.rb solves this issue:
   controller do
   def update
     # get the currently logged in AdminUser's id
