@@ -1,17 +1,34 @@
 ActiveAdmin.register CoffeeAndTea do
+  permit_params :brand, :description, :image, :image_cache
 
-# See permitted parameters documentation:
-# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-#
-# permit_params :list, :of, :attributes, :on, :model
-#
-# or
-#
-# permit_params do
-#   permitted = [:permitted, :attributes]
-#   permitted << :other if resource.something?
-#   permitted
-# end
+  index do
+    selectable_column
+    id_column
+    column :brand
+    column :description
+    actions
+  end
 
+  filter :brand
 
+  form(:html => { :multipart => true }) do |f|
+    f.inputs "Coffee and Tea Details" do
+      f.input :brand
+      f.input :description, as: :text, :input_html => { class: "tinymce" }
+      f.input :image, as: :file, :hint => f.object.image.present? \
+        ? image_tag(f.object.image.url(:thumb))
+        : content_tag(:span, "no image yet")
+        f.input :image_cache, :as => :hidden
+    end
+    f.actions
+  end
+
+  show do
+    attributes_table do
+      row :brand
+      row :description
+      row :image do
+        image_tag coffee_and_tea.image.url(:thumb)
+      end
+    end
 end
