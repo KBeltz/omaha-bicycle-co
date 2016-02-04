@@ -1,31 +1,3 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Coffee And Teas</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Brand</th>
-      <th>Description</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @coffee_and_teas.each do |coffee_and_tea| %>
-      <tr>
-        <td><%= coffee_and_tea.brand %></td>
-        <td><%= coffee_and_tea.description %></td>
-        <td><%= coffee_and_tea.image %></td>
-        <td><%= link_to 'Show', coffee_and_tea %></td>
-        <td><%= link_to 'Edit', edit_coffee_and_tea_path(coffee_and_tea) %></td>
-        <td><%= link_to 'Destroy', coffee_and_tea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Coffee and tea', new_coffee_and_tea_path %>
+<h1>Coffee & Tea</h1>

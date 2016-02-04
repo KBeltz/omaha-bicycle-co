@@ -1,29 +1,3 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Pedal Happies</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @pedal_happies.each do |pedal_happy| %>
-      <tr>
-        <td><%= pedal_happy.name %></td>
-        <td><%= pedal_happy.description %></td>
-        <td><%= link_to 'Show', pedal_happy %></td>
-        <td><%= link_to 'Edit', edit_pedal_happy_path(pedal_happy) %></td>
-        <td><%= link_to 'Destroy', pedal_happy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Pedal happy', new_pedal_happy_path %>
+<h1>#pedalhappy</h1>
