@@ -5,7 +5,7 @@ ActiveAdmin.register_page "Dashboard" do
   content title: proc{ I18n.t("active_admin.dashboard") } do
     div class: "blank_slate_container", id: "dashboard_default_message" do
       span class: "blank_slate" do
-        span I18n.t("active_admin.dashboard_welcome.welcome")
+        image_tag("obc-logo.jpg", size: "400x300", alt: "OBC Logo")
       end
     end
   end
