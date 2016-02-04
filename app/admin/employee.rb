@@ -9,11 +9,16 @@ ActiveAdmin.register Employee do
     actions
   end
 
+  filter :name
+
   form(:html => { :multipart => true }) do |f|
-    f.inputs "Admin Details" do
+    f.inputs "Employee Details" do
       f.input :name
       f.input :description, as: :text
-      f.input :image, as: :file, :hint => f.image_tag(f.object.image.url(:thumb))
+      f.input :image, as: :file, :hint => f.object.image.present? \
+        ? image_tag(f.object.image.url(:thumb))
+        : content_tag(:span, "no image yet")
+        f.input :image_cache, :as => :hidden
     end
     f.actions
   end
@@ -22,9 +27,9 @@ ActiveAdmin.register Employee do
     attributes_table do
       row :name
       row :description
-      row :image do
-        image_tag object.image.url(:thumb)
-      end
+      # row :image do
+      #   image_tag object.image.url(:thumb)
+      # end
     end
   end
 end
