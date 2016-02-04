@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @coffee_and_tea.brand %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @coffee_and_tea.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @coffee_and_tea.image %>
+</p>
+
+<%= link_to 'Edit', edit_coffee_and_tea_path(@coffee_and_tea) %> |
+<%= link_to 'Back', coffee_and_teas_path %>

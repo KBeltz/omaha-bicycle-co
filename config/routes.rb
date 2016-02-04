@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :coffee_and_teas
+  resources :pedal_happies
   resources :customs
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
