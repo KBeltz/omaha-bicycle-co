@@ -1,29 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Customs</h1>
+<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+  <ul class="orbit-container">
+    <button class="orbit-previous" aria-label="previous">
+      <span class="show-for-sr">Previous Slide</span>
+      &#9664;
+    </button>
+    <button class="orbit-next" aria-label="next">
+      <span class="show-for-sr">Next Slide</span>
+      &#9654;
+    </button>
+    <li class="orbit-slide is-active">
+      <img src="http://placehold.it/2000x750">
+    </li>
+    <li class="orbit-slide">
+      <img src="http://placehold.it/2000x750">
+    </li>
+    <li class="orbit-slide">
+      <img src="http://placehold.it/2000x750">
+    </li>
+    <li class="orbit-slide">
+      <img src="http://placehold.it/2000x750">
+    </li>
+  </ul>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Caption</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @customs.each do |custom| %>
-      <tr>
-        <td><%= custom.image %></td>
-        <td><%= custom.caption %></td>
-        <td><%= link_to 'Show', custom %></td>
-        <td><%= link_to 'Edit', edit_custom_path(custom) %></td>
-        <td><%= link_to 'Destroy', custom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Custom', new_custom_path %>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+<script>
+  $(document).foundation();
+</script>
