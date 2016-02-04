@@ -27,9 +27,9 @@ ActiveAdmin.register Employee do
     attributes_table do
       row :name
       row :description
-      # row :image do
-      #   image_tag object.image.url(:thumb)
-      # end
+      row :image do
+        image_tag employee.image.url(:thumb)
+      end
     end
   end
 end

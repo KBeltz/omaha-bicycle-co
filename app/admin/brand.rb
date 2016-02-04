@@ -28,9 +28,9 @@ ActiveAdmin.register Brand do
     attributes_table do
       row :name
       row :category
-      # row :image do
-      #   image_tag object.image
-      # end
+      row :image do
+        image_tag brand.image.url(:thumb)
+      end
     end
   end
 end
