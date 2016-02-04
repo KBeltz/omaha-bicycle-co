@@ -14,7 +14,7 @@ ActiveAdmin.register Event do
   form(:html => { :multipart => true }) do |f|
     f.inputs "Event Details" do
       f.input :name
-      f.input :description
+      f.input :description, as: :text, :input_html => { class: "tinymce" }
     end
     f.actions
   end

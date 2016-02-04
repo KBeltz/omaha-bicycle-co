@@ -14,11 +14,11 @@ ActiveAdmin.register Employee do
   form(:html => { :multipart => true }) do |f|
     f.inputs "Employee Details" do
       f.input :name
-      f.input :description, as: :text
       f.input :image, as: :file, :hint => f.object.image.present? \
         ? image_tag(f.object.image.url(:thumb))
         : content_tag(:span, "no image yet")
         f.input :image_cache, :as => :hidden
+      f.input :description, as: :text, :input_html => { class: "tinymce" }
     end
     f.actions
   end

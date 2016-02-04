@@ -11,6 +11,9 @@ ActiveAdmin.setup do |config|
   #
   config.site_title_link = "/"
 
+  # TinyMCE intializer
+  config.register_javascript 'tinymce.js'
+
   # Set an optional image to be displayed for the header
   # instead of a string (overrides :site_title)
   #
