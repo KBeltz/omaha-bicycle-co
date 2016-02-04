@@ -28,6 +28,10 @@ gem 'activeadmin', '~> 1.0.0.pre2'
 gem 'tinymce-rails', '~> 4.3', '>= 4.3.3'
 # Image uploader
 gem 'carrierwave', '~> 0.10.0'
+# Helper for image uploader
+gem 'mini_magick', '~> 4.3', '>= 4.3.6'
+# Foundation framework
+gem 'foundation-rails', '~> 6.1', '>= 6.1.2.0'
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
