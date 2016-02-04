@@ -1,4 +1,5 @@
 ActiveAdmin.register CoffeeAndTea do
+  menu label: "Coffee & Tea"
   permit_params :brand, :description, :image, :image_cache
 
   index do
@@ -31,4 +32,5 @@ ActiveAdmin.register CoffeeAndTea do
         image_tag coffee_and_tea.image.url(:thumb)
       end
     end
+  end
 end

@@ -1,4 +1,6 @@
 ActiveAdmin.register PedalHappy do
+  menu label: "Pedal Happy"
+
   permit_params :name, :description
 
   index do
