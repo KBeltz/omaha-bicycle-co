@@ -6,7 +6,10 @@
   <div class="large-4 columns">
     <div class="panel">
       <p>
-        <a href="http://www.allcitycycles.com"><%= image_tag 'obc-bike-brands/all-city-logo-300x300.jpg' %></a>
+        <% brands = Brand.all %>
+        <% brands.each do |b| %>
+          <%= link_to image_tag(b.image), b.url %>
+        <% end %>
       </p>
     </div>
   </div>
