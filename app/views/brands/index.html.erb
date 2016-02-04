@@ -2,15 +2,47 @@
 
 <h1>Brands</h1>
 
-<div class="row">
-  <div class="large-4 columns">
-    <div class="panel">
-      <p>
-        <% brands = Brand.all %>
-        <% brands.each do |b| %>
-          <%= link_to image_tag(b.image), b.url %>
-        <% end %>
-      </p>
+<div class="button-bar">
+  <ul class="button-group no-bullet">
+    <li><button class="button secondary" onclick="showMe('bikes'); hideMe('parts')">Bicycles</button></li>
+    <li><button class="button secondary" onclick="showMe('parts'); hideMe('bikes')">Parts, Clothing, Etc.</button></li>
+  </ul>
+</div>
+
+<div class="bikes" style="display:none">
+  <div class="row">
+    <div class="large-4 columns">
+      <div class="panel">
+        <p>
+          <!-- for all brands where category = bikes -->
+          <% brands = Brand.all %>
+          <% brands.each do |b| %>
+            <% if b.category.downcase == "bikes" %>
+              <%= link_to image_tag(b.image), b.url %>
+            <% else %>
+            <% end %>
+          <% end %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="parts" style="display:none">
+  <div class="row">
+    <div class="large-4 columns">
+      <div class="panel">
+        <p>
+          <!-- for all brands where category = parts -->
+          <% brands = Brand.all %>
+          <% brands.each do |b| %>
+            <% if b.category.downcase == "parts, clothing, etc." %>
+              <%= link_to image_tag(b.image), b.url %>
+            <% else %>
+            <% end %>
+          <% end %>
+        </p>
+      </div>
     </div>
   </div>
 </div>
