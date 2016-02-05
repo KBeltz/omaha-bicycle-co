@@ -16,7 +16,7 @@
       <% brands = Brand.all %>
       <% brands.each do |b| %>
         <% if b.category.downcase == "bikes" %>
-          <div class="panel callout">
+          <div class="callout large primary">
             <%= link_to image_tag(b.image), b.url %>
           </div>
         <% else %>
@@ -33,7 +33,7 @@
       <% brands = Brand.all %>
       <% brands.each do |b| %>
         <% if b.category.downcase == "parts, clothing, etc." %>
-          <div class="panel callout">
+          <div class="callout large primary">
             <%= link_to image_tag(b.image), b.url%>
           </div>
         <% else %>

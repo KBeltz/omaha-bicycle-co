@@ -12,34 +12,36 @@
     <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
   </head>
 
-  <header>
-    <ul class="no-bullet">
-      <li>
-        <%= link_to "Omaha Bicycle Co.", '/' %>
-      </li>
-      <li>
-        <%= link_to "About", employees_path %>
-      </li>
-      <li>
-        <%= link_to "Brands", brands_path %>
-      </li>
-      <li>
-        <%= link_to "Coffee & Tea", coffee_and_teas_path %>
-      </li>
-      <li>
-        <%= link_to "Custom Builds", customs_path %>
-      </li>
-      <li>
-        <%= link_to "Events", events_path %>
-      </li>
-      <li>
-        <%= link_to "#pedalhappy", pedal_happies_path %>
-      </li>
-      <li>
-        <%= link_to "Contact", "/contact" %>
-      </li>
-    </ul>
-  </header>
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="menu">
+        <li class="menu-text">
+          <%= link_to "Omaha Bicycle Co.", '/' %>
+        </li>
+        <li>
+          <%= link_to "About", employees_path %>
+        </li>
+        <li>
+          <%= link_to "Brands", brands_path %>
+        </li>
+        <li>
+          <%= link_to "Coffee & Tea", coffee_and_teas_path %>
+        </li>
+        <li>
+          <%= link_to "Custom Builds", customs_path %>
+        </li>
+        <li>
+          <%= link_to "Events", events_path %>
+        </li>
+        <li>
+          <%= link_to "#pedalhappy", pedal_happies_path %>
+        </li>
+        <li>
+          <%= link_to "Contact", "/contact" %>
+        </li>
+      </ul>
+    </div>
+  </div>
 
   <body>
 
@@ -48,7 +50,7 @@
   </body>
 
   <footer>
-    Footer goes here.
+    &copy; 2016 Omaha Bicycle Co.
   </footer>
 
 </html>
