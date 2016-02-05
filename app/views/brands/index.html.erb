@@ -12,18 +12,16 @@
 <div id="bikes" style="display:none">
   <div class="row">
     <div class="large-4 columns">
-      <div class="panel">
-        <p>
-          <!-- for all brands where category = bikes -->
-          <% brands = Brand.all %>
-          <% brands.each do |b| %>
-            <% if b.category.downcase == "bikes" %>
-              <%= link_to image_tag(b.image), b.url %>
-            <% else %>
-            <% end %>
-          <% end %>
-        </p>
-      </div>
+      <!-- for all brands where category = bikes -->
+      <% brands = Brand.all %>
+      <% brands.each do |b| %>
+        <% if b.category.downcase == "bikes" %>
+          <div class="panel callout">
+            <%= link_to image_tag(b.image), b.url %>
+          </div>
+        <% else %>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </div>
@@ -31,18 +29,16 @@
 <div id="parts" style="display:none">
   <div class="row">
     <div class="large-4 columns">
-      <div class="panel">
-        <p>
-          <!-- for all brands where category = parts -->
-          <% brands = Brand.all %>
-          <% brands.each do |b| %>
-            <% if b.category.downcase == "parts, clothing, etc." %>
-              <%= link_to image_tag(b.image), b.url%>
-            <% else %>
-            <% end %>
-          <% end %>
-        </p>
-      </div>
+      <!-- for all brands where category = parts -->
+      <% brands = Brand.all %>
+      <% brands.each do |b| %>
+        <% if b.category.downcase == "parts, clothing, etc." %>
+          <div class="panel callout">
+            <%= link_to image_tag(b.image), b.url%>
+          </div>
+        <% else %>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </div>
